@@ -1,3 +1,12 @@
+# IMPORTACIONES__________
+
+from clases import *
+
+
+# _______________________
+
+
+
 #BOLETÍN EJERCICIOS PYTHON
 
 #1 Imprime "Hola, mundo!" en la pantalla. 
@@ -98,22 +107,5 @@ promedio = sumaLista/contador
 print("la media es: "+ str(promedio))
     
 
-#11 Crea una clase llamada Persona con atributos nombre y edad. Luego, crea un objeto de tipo Persona e imprime sus atributos.
 
-#12 Crea una clase llamada Rectangulo con atributos ancho y altura. Agrega un método para calcular el área del rectángulo y otro para calcular su perímetro. 
 
-#13 Crea una clase llamada Estudiante con atributos nombre, edad y curso. Crea varios objetos de tipo Estudiante y almacénalos en una lista. Luego, itera sobre la lista e imprime la información de cada estudiante.  
-
-#14 Crea una clase llamada CuentaBancaria con atributos titular y saldo. Agrega métodos para depositar y retirar dinero de la cuenta.  
-
-#15 Crea una clase llamada Coche con atributos marca y modelo. Crea un método que imprima la información del coche en un formato legible. 
-
-#16 Crea una clase base llamada Animal con un método hablar que imprima un mensaje genérico. Luego, crea dos clases derivadas, Perro y Gato, que hereden de Animal y sobrescriban el método hablar para imprimir mensajes diferentes. 
-
-#17 Crea una clase base llamada FiguraGeometrica con atributos ancho y altura, y un método area que calcule el área de la figura. Luego, crea clases derivadas como Rectangulo y Triangulo que hereden de FiguraGeometrica y sobrescriban el método area para calcular el área específica de cada figura.
-
-#18 Crea una clase base llamada Vehiculo con atributos marca y modelo, y un método informacion que imprima la información del vehículo. Luego, crea clases derivadas como Coche y Bicicleta que hereden de Vehiculo y añadan atributos y métodos específicos de cada tipo de vehículo.
-
-#19 Crea una clase base llamada InstrumentoMusical con un método tocar que imprima un mensaje genérico. Luego, crea clases derivadas como Piano y Guitarra que hereden de InstrumentoMusical y sobrescriban el método tocar para imprimir mensajes diferentes.
-
-#20 Crea una clase base llamada Empleado con atributos nombre y salario, y un método calcular_salario_anual que calcule el salario anual del empleado. Luego, crea clases derivadas como Gerente y Programador que hereden de Empleado y añadan atributos y métodos específicos de cada tipo de empleado.
