@@ -1,6 +1,6 @@
 # IMPORTACIONES__________
 
-from clases import *
+from python.clases import *
 
 
 # _______________________

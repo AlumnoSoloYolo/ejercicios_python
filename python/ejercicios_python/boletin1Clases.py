@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 #11 Crea una clase llamada Persona con atributos nombre y edad. Luego, 
 # crea un objeto de tipo Persona e imprime sus atributos.
 
@@ -88,19 +90,104 @@ print(cuentaBancaria1.saldo)
 #15 Crea una clase llamada Coche con atributos marca y modelo. 
 # Crea un método que imprima la información del coche en un formato legible. 
 
+class Cochesito():
+    def __init__(self, marca, modelo):
+        self.marca=marca
+        self.modelo=modelo
+    
+    def __str__(self):
+        return f"Marca: {self.marca}\nModelo: {self.modelo}"
+ 
+miCoche = Cochesito("Peugeot", "308")   
+print(miCoche.__str__())
+
 #16 Crea una clase base llamada Animal con un método hablar que imprima 
 # un mensaje genérico. Luego, crea dos clases derivadas, Perro y Gato, que hereden 
 # de Animal y sobrescriban el método hablar para imprimir mensajes diferentes. 
+class Animal():  
+    def hablar():
+        return "Hago ruidos por la boca"
+
+class Perro(Animal):
+    def hablar():
+        return "guau guau"
+    
+class Gato(Animal):
+    def hablar():
+        return "miau miua"
+
+animal1 = Animal()
+perro1 = Perro()
+gato1 = Gato()
+
+
+print(animal1.hablar())
+print(perro1.hablar())
+print(gato1.hablar())
+   
 
 #17 Crea una clase base llamada FiguraGeometrica con atributos ancho y altura, 
 # y un método area que calcule el área de la figura. Luego, crea clases derivadas 
 # como Rectangulo y Triangulo que hereden de FiguraGeometrica y sobrescriban el método 
 # area para calcular el área específica de cada figura.
+class FiguraGeometrica(ABC):
+    def __init__(self, anchura, altura):
+        self.anchura=anchura
+        self.altura=altura
+        
+    @abstractmethod
+    def calcArea(self):
+        pass
+    
+class Rectangulo(FiguraGeometrica):
+    def __init__(self, anchura, altura):
+        super().__init__(anchura, altura)
+    
+    def calcArea(self):
+        area=self.anchura*self.altura
+        return area
+    
+class Triangulo(FiguraGeometrica):
+    def __init__(self, anchura, altura):
+        super().__init__(anchura, altura)
+    
+    def calcArea(self):
+        area=self.anchura*self.altura/2
+        return area
 
 #18 Crea una clase base llamada Vehiculo con atributos marca y modelo, y un método 
 # informacion que imprima la información del vehículo. Luego, crea clases derivadas 
 # como Coche y Bicicleta que hereden de Vehiculo y añadan atributos y métodos específicos 
 # de cada tipo de vehículo.
+class Vehiculo():
+    def __init__(self, marca, modelo):
+        self.marca=marca
+        self.modelo=modelo
+        
+        
+    def informacion(self):
+        return f"marca: {self.marca}\nmodelo: {self.modelo}"
+
+class Coche(Vehiculo):
+    def __init__(self, marca, modelo, combustible):
+        super().__init__(marca, modelo)
+        self.combustible=combustible
+    
+    def tocar_claxon():
+        print("Tocando el claxon")
+        
+class Bicicleta():
+    def __init__(self, marca, modelo, color ):
+        super().__init__(marca, modelo)
+        self.color=color
+    
+    def pedalear():
+        print("Pedaleando")
+        
+coche1 = Coche("peugeot", "308", "diesel")
+print(coche1.informacion())
+
+
 
 #19 Crea una clase base llamada InstrumentoMusical con un método tocar que imprima un 
 # mensaje genérico. Luego, crea clases derivadas como Piano y Guitarra que hereden de 
